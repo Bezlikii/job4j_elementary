@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class PointTest {
 
     @Test
-    public void distance() {
+    public void whenDistanceIsOk() {
         int x1 = 6;
         int y1 = 9;
         int x2 = 13;
