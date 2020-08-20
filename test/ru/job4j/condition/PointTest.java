@@ -12,13 +12,13 @@ public class PointTest {
     public void distance() {
         int x1 = 6;
         int y1 = 9;
-        int x2 = 12;
+        int x2 = 13;
         int y2 = 3;
 
         double expected = 9.219544457292887;
 
-        double rsl = Point.distance(x1, y1, x2, y2);
+        double out = Point.distance(x1, y1, x2, y2);
 
-        Assert.assertEquals(rsl, rsl, 0.01);
+        Assert.assertEquals(expected, out, 0.01);
     }
 }
