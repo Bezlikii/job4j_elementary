@@ -15,7 +15,7 @@ public class PointTest {
         int x2 = 13;
         int y2 = 3;
 
-        double expected = 9.219544457292887;
+        double expected = 9.21;
 
         double out = Point.distance(x1, y1, x2, y2);
 
