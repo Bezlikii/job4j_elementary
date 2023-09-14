@@ -1,24 +1,36 @@
 package ru.job4j.loop;
 
-import org.hamcrest.core.Is;
-import org.junit.Assert;
-import org.junit.Test;
-import ru.job4j.loop.Mortgage;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
-
-public class MortgageTest {
-
+class MortgageTest {
     @Test
-    public void when1Year() {
-        int year = Mortgage.year(1000, 1200, 1);
-        Assert.assertThat(year, Is.is(1));
+    void whenAmount1000Salary1200Percent1ThenYear1() {
+        int amount = 1000;
+        int salary = 1200;
+        double percent = 1;
+        int result = Mortgage.year(amount, salary, percent);
+        int expected = 1;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    public void when2Year() {
-        int year = Mortgage.year(100, 120, 50);
-        Assert.assertThat(year, Is.is(2));
+    void whenAmount100Salary120Percent50ThenYear2() {
+        int amount = 100;
+        int salary = 120;
+        double percent = 50;
+        int result = Mortgage.year(amount, salary, percent);
+        int expected = 2;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenAmount1000Salary1200Percent20ThenYear1() {
+        int amount = 1000;
+        int salary = 1200;
+        double percent = 20;
+        int result = Mortgage.year(amount, salary, percent);
+        int expected = 1;
+        assertThat(result).isEqualTo(expected);
     }
 }
