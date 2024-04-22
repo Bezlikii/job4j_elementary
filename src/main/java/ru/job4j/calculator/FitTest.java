@@ -10,15 +10,48 @@ public class FitTest {
     public void whenManWeightIs187D() {
         double in = 187.00;
         double expected = 100.05;
-        double out = Fit.manWeight(in);
+        double out = Fit.manWeight((short) in);
         Assert.assertEquals(expected, out, 0.01);
     }
 
     @Test
-    public void whenWomanWeightIs178D() {
+    public void whenWomanWeightIs187D() {
         double in = 187.00;
         double expected = 88.55;
-        double out = Fit.womanWeight(in);
+        double out = Fit.womanWeight((short) in);
         Assert.assertEquals(expected, out, 0.01);
     }
+
+    @Test
+    public void testWomanWeightHeightSmallerThanCorrection() {
+        double in = 100.00;
+        double expected = 0;
+        double out = Fit.womanWeight((short) in);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void testManWeightSmallerThanCorrection() {
+        double in = 99.00;
+        double expected = 0;
+        double out = Fit.manWeight((short) in);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void testManWeightHeightLargerThanCorrection() {
+        double in = 200.00;
+        double expected = 115.00;
+        double out = Fit.manWeight((short) in);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void testWomanWeightLargerThanCorrection() {
+        double in = 200.00;
+        double expected = 103.50;
+        double out = Fit.womanWeight((short) in);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
 }
