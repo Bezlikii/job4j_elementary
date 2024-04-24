@@ -25,7 +25,6 @@ public class SimpleStringEncoder {
         } else {
             result += symbol;
         }
-
         return result;
     }
 }

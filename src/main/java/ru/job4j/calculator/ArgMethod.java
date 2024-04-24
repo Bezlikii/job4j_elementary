@@ -1,7 +1,5 @@
 package ru.job4j.calculator;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class ArgMethod {
 
     public static void hello(String name) {
@@ -26,11 +24,8 @@ public class ArgMethod {
         int age = 33;
 
         ArgMethod.hello(name);
-
         ArgMethod.hello(name, age);
-
         ArgMethod.hello(age);
-
         ArgMethod.hello(name, name, name);
     }
 

@@ -19,5 +19,4 @@ public class SquareTest {
         int[] expected = new int[] {0, 1, 4, 9, 16};
         assertThat(result).containsExactly(expected);
     }
-
 }

@@ -3,10 +3,6 @@ package ru.job4j.condition;
 import org.hamcrest.core.Is;
 import org.junit.Assert;
 import org.junit.Test;
-import ru.job4j.condition.ThreeMax;
-
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
 
 public class ThreeMaxTest {
 
