@@ -10,16 +10,16 @@ public class SimpleStringEncoder {
             if (symbol == input.charAt(i)) {
                 counter++;
             } else {
-                if (counter > 1) {
-                    result += symbol + String.valueOf(counter);
-                } else {
-                    result += symbol;
-                }
+                result = appendSymbol(counter, result, symbol);
                 symbol = input.charAt(i);
                 counter = 1;
             }
         }
+        result = appendSymbol(counter, result, symbol);
+        return result;
+    }
 
+    public static String appendSymbol(int counter, String result, char symbol) {
         if (counter > 1) {
             result += symbol + String.valueOf(counter);
         } else {
